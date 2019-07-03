@@ -16,5 +16,4 @@ spec:
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --k8s-allow-namespace=team1
             - --git-branch=master
-            - --git-path=workloads
             - --git-url=git@github.com:stefanprodan/flux-upgrade-test

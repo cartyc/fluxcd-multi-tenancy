@@ -15,5 +15,6 @@ spec:
             - --sync-interval=5m
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --k8s-allow-namespace=team1
-            - --git-url=git@github.com:org/dev-team1
             - --git-branch=master
+            - --git-path=workloads
+            - --git-url=git@github.com:stefanprodan/flux-upgrade-test

@@ -45,7 +45,7 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: fflux-psp-team1
+  name: flux-psp-team1
 subjects:
   - kind: ServiceAccount
     name: flux

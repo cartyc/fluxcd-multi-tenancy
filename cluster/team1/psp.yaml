@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: PodSecurityPolicy
 metadata:
-  name: flux.privileged
+  name: flux-psp-team1
   annotations:
     seccomp.security.alpha.kubernetes.io/allowedProfileNames: '*'
 spec:
@@ -30,23 +30,23 @@ spec:
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: flux-psp
+  name: flux-psp-team1
 rules:
   - apiGroups: ['extensions']
     resources: ['podsecuritypolicies']
     verbs:     ['use']
     resourceNames:
-      - flux.privileged
+      - flux-psp-team1
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: flux-psp
+  name: flux-psp-team1
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: flux-psp
+  name: fflux-psp-team1
 subjects:
   - kind: ServiceAccount
     name: flux
-    namespace: flux-system
+    namespace: team1

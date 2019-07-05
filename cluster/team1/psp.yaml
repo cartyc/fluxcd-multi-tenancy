@@ -50,3 +50,6 @@ subjects:
   - kind: ServiceAccount
     name: flux
     namespace: team1
+  - kind: ServiceAccount
+    name: default
+    namespace: team1

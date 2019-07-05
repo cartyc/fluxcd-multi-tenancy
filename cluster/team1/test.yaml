@@ -22,7 +22,6 @@ spec:
       labels:
         app: podinfo
     spec:
-      serviceAccountName: flux
       containers:
         - name: podinfod
           image: quay.io/stefanprodan/podinfo:1.4.0

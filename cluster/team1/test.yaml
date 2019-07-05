@@ -28,6 +28,7 @@ spec:
           imagePullPolicy: IfNotPresent
           securityContext:
             privileged: true
+            readOnlyRootFilesystem: false
           ports:
             - containerPort: 9898
               name: http

@@ -5,7 +5,7 @@ metadata:
   annotations:
     seccomp.security.alpha.kubernetes.io/allowedProfileNames: '*'
 spec:
-  privileged: true
+  privileged: false
   allowPrivilegeEscalation: true
   readOnlyRootFilesystem: false
   allowedCapabilities:
@@ -47,9 +47,6 @@ roleRef:
   kind: ClusterRole
   name: flux-psp-team1
 subjects:
-  - kind: ServiceAccount
-    name: flux
-    namespace: team1
   - kind: ServiceAccount
     name: default
     namespace: team1

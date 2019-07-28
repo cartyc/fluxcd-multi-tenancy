@@ -1,3 +1,5 @@
 bases:
   - ./common/
-  - ./team1/
+  # - ./team1/
+  - ./flagger/
+  - ./hello-k8s/
